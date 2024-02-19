@@ -66,16 +66,6 @@ function handleClick(event) {
   document.getElementById("select-seat").innerText = selectedCount;
   updateTotalPrice();
 }
-document.getElementById("coupon-button").addEventListener("click", () => {
-  console.log("click");
-  const couponInput = document.getElementById("coupon-input").value;
-  if (!(couponInput in discountCodes)) {
-    alert("Invalid Coupon Code");
-    return;
-  }
-  updateTotalPrice();
-  document.getElementById("discount-content").style.display = "none";
-});
 document.querySelectorAll("#btn").forEach((button) => {
   button.addEventListener("click", handleClick);
 });
